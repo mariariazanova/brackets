@@ -6,9 +6,9 @@ module.exports = function check(str, bracketsConfig) {
   do {
       aLength = aString.length;
       bracketsPairs.forEach(e => {
-          aString = aString.replace(e, "");
+          aString = aString.replace(e, ""); //заменяем элементы на ""
       });
   } while (aLength !== aString.length);
 
-  return aString.length === 0;
+  return aString.length === 0; //вернет true, если массив оказался пустой
 };
